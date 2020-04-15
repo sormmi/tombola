@@ -50,7 +50,7 @@ const VikingPage = () => {
   }
 
   return (
-    <Layout page="viking" title="viking">
+    <Layout page="viking" title="vikinglotto">
       <SEO title="Viking"/>
 
       <div className="container">
