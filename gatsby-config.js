@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `tombola`,
+    title: `omatombola`,
     description: `Pelinumeroiden arvontapalvelu`,
     author: `@sormmi`,
   },
@@ -19,8 +19,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `tombolo arvontapalvelu`,
-        short_name: `tombolo`,
+        name: `omatombola arvontapalvelu`,
+        short_name: `omatombola`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

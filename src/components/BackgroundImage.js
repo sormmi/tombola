@@ -61,6 +61,11 @@ const StyledBackgroundSection = styled(BackgroundSection)`
     margin: 0 0 0 -25%;
     background: rgba(0, 0, 0, 0.25);
     padding: 30px;
+    
+    @media only screen and (max-width: 600px){
+      width: 70%;
+      margin: 0 0 0 -35%;
+    }
   }
 `
 export default StyledBackgroundSection

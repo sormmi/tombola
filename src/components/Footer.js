@@ -37,35 +37,34 @@ const FooterLinks = styled.div`
 const Footer = () => {
   return (
 
-          <FooterDiv>
-            <Link to="/"><h2>tombola</h2></Link>
-            <span>Arvontapalvelu suosituille veikkauspeleille</span>
+    <FooterDiv>
+      <Link to="/"><h2>omatombola</h2></Link>
+      <span>Arvontapalvelu suosituille veikkauspeleille</span>
 
-            <FooterLinks>
+      <FooterLinks>
+        <a
+          href="https://www.linkedin.com/in/mika-sormunen-51958171"
+          target="_blank"
+          rel="noopener noreferrer"
+          key="linkedin"
+        >
+          <FaLinkedin size={30} />
+        </a>
 
-                    <a
-                      href="https://www.linkedin.com/in/mika-sormunen-51958171"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      key="linkedin"
-                    >
-                      <FaLinkedin size={30} />
-                    </a>
+        <a
+          href="https://twitter.com/sormmi"
+          target="_blank"
+          rel="noopener noreferrer"
+          key="twitter"
+        >
+          <FaTwitter size={30} />
+        </a>
 
-                    <a
-                      href="https://twitter.com/sormmi"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      key="twitter"
-                    >
-                      <FaTwitter size={30} />
-                    </a>
+      </FooterLinks>
 
-            </FooterLinks>
+      <small>&copy; sormmi {new Date().getFullYear()}</small>
 
-            <small>&copy; sormmi {new Date().getFullYear()}</small>
-
-          </FooterDiv>
+    </FooterDiv>
   );
 };
 
