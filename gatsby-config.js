@@ -19,8 +19,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `tombalo arvontapalvelu`,
-        short_name: `tombalo`,
+        name: `tombolo arvontapalvelu`,
+        short_name: `tombolo`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
