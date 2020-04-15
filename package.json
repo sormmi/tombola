@@ -3,7 +3,7 @@
   "private": true,
   "description": "Tombola application",
   "version": "0.1.0",
-  "author": "sormmi@gmail.com>",
+  "author": "Mika Sormunen <sormmi@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.20.12",
