@@ -36,7 +36,7 @@ const VikingNumber = styled.label`
   
   @media only screen and (max-width: 600px){
     border-radius: 15px;
-    padding: 0;
+    padding: 3px;
     font-size: 12px;
   }
 `;
