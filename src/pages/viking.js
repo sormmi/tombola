@@ -2,20 +2,11 @@ import React, {useState} from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import styled from "styled-components"
 import viking from "../js/viking"
 import VikingRow from "../components/Viking/VikingRow"
 import {Button, ClearButton} from "../styles/Button"
 import {InfoSpan} from "../styles/InfoSpan"
-
-const Grid = styled.div`
-  display: grid;
-  grid-template-rows: repeat(0, 1fr);
-  align-items: start;
-  row-gap: 10px;
-  margin: 20px;
-  padding: 20px;
-`;
+import {Grid} from "../styles/Grid"
 
 const VikingPage = () => {
 

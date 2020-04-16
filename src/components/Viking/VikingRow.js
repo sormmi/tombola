@@ -21,7 +21,7 @@ const VikingRowDiv = styled.div`
     }
   }
   @media only screen and (max-width: 600px){
-    grid-template-columns: repeat(6, 30px) auto 30px;
+    grid-template-columns: repeat(6, 40px) auto 40px;
     column-gap: 3px;
   }
 `;
@@ -35,8 +35,8 @@ const VikingNumber = styled.label`
   padding: 15px;
   
   @media only screen and (max-width: 600px){
-    border-radius: 15px;
-    padding: 3px;
+    border-radius: 20px;
+    padding: 7px;
     font-size: 12px;
   }
 `;
@@ -49,7 +49,12 @@ const VikingRow = ({nums}) => {
     <VikingRowDiv>
       {nums.map((num, index) => {
         if (index === extraNumberIndex) {
-          return (<><div><div>&nbsp;</div></div><VikingNumber key={index} index={index}>{num}</VikingNumber></>)
+          return (
+            <React.Fragment key={index}>
+              <span>&nbsp;</span>
+              <VikingNumber index={index}>{num}</VikingNumber>
+            </React.Fragment>
+          )
         }
         return (<VikingNumber key={index} index={index}>{num}</VikingNumber>)
       })}

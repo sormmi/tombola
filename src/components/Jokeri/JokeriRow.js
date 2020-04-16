@@ -21,8 +21,8 @@ const JokeriRowDiv = styled.div`
     }
   }
   @media only screen and (max-width: 600px){
-    grid-template-columns: repeat(7, 30px);
-    column-gap: 3px;
+    grid-template-columns: repeat(7, 40px);
+    column-gap: 0;
   }
 `;
 
@@ -38,7 +38,7 @@ const JokeriNumber = styled.label`
   
   @media only screen and (max-width: 600px){
     border-radius: 3px;
-    padding: 6px;
+    padding: 4px 8px;
   }
 `;
 

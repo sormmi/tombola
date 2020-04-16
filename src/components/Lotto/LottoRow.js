@@ -21,7 +21,7 @@ const LottoRowDiv = styled.div`
     }
   }
   @media only screen and (max-width: 600px){
-    grid-template-columns: repeat(7, 30px);
+    grid-template-columns: repeat(7, 40px);
     column-gap: 3px;
   }
 `;
@@ -35,8 +35,8 @@ const LottoNumber = styled.label`
   padding: 15px;
   
   @media only screen and (max-width: 600px){
-    border-radius: 15px;
-    padding: 3px;
+    border-radius: 20px;
+    padding: 7px;
     font-size: 12px;
   }
 `;

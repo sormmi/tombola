@@ -22,7 +22,7 @@ const EurojackpotRowDiv = styled.div`
   }
   
   @media only screen and (max-width: 600px){
-    grid-template-columns: repeat(5, 30px) auto 30px 30px;
+    grid-template-columns: repeat(5, 40px) auto 40px 40px;
     column-gap: 3px;
   }
 `;
@@ -36,8 +36,8 @@ const EurojackpotNumber = styled.label`
   padding: 15px;
   
   @media only screen and (max-width: 600px){
-    border-radius: 15px;
-    padding: 3px;
+    border-radius: 20px;
+    padding: 7px;
     font-size: 12px;
   }
 `;
@@ -50,7 +50,11 @@ const EurojackpotRow = ({nums}) => {
     <EurojackpotRowDiv>
       {nums.map((num, index) => {
         if (index === extraNumberIndex) {
-          return (<><div>&nbsp;</div><EurojackpotNumber key={index} index={index}>{num}</EurojackpotNumber></>)
+          return (
+            <React.Fragment key={index}>
+              <span>&nbsp;</span>
+              <EurojackpotNumber index={index}>{num}</EurojackpotNumber>
+            </React.Fragment>)
         }
         return (<EurojackpotNumber key={index} index={index}>{num}</EurojackpotNumber>)
       })}
