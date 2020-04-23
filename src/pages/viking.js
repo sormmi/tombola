@@ -1,12 +1,12 @@
 import React, {useState} from "react"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import viking from "../js/viking"
-import VikingRow from "../components/Viking/VikingRow"
-import {Button, ClearButton} from "../styles/Button"
-import {InfoSpan} from "../styles/InfoSpan"
-import {Grid} from "../styles/Grid"
+import Layout from "components/Layout"
+import SEO from "components/seo"
+import viking from "js/viking"
+import Index from "components/Viking"
+import {Button, ClearButton} from "styles/Button"
+import {InfoSpan} from "styles/InfoSpan"
+import {Grid} from "styles/Grid"
 
 const VikingPage = () => {
 
@@ -35,7 +35,7 @@ const VikingPage = () => {
 
     let rows = [];
     for (let i = 0; i < counter; i++)  {
-      rows.push(<VikingRow nums={rowNums[i]} key={i} />);
+      rows.push(<Index nums={rowNums[i]} key={i} />);
     }
     return rows;
   }

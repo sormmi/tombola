@@ -1,12 +1,12 @@
 import React, {useState} from "react"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import lotto from "../js/lotto"
-import LottoRow from "../components/Lotto/LottoRow"
-import {Button, ClearButton} from "../styles/Button"
-import {InfoSpan} from "../styles/InfoSpan"
-import {Grid} from "../styles/Grid"
+import Layout from "components/Layout"
+import SEO from "components/seo"
+import lotto from "js/lotto"
+import Index from "components/Lotto"
+import {Button, ClearButton} from "styles/Button"
+import {InfoSpan} from "styles/InfoSpan"
+import {Grid} from "styles/Grid"
 
 const LottoPage = () => {
 
@@ -35,7 +35,7 @@ const LottoPage = () => {
 
     let rows = [];
     for (let i = 0; i < counter; i++)  {
-      rows.push(<LottoRow nums={rowNums[i]} key={i} />);
+      rows.push(<Index nums={rowNums[i]} key={i} />);
     }
     return rows;
   }

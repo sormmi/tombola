@@ -1,12 +1,12 @@
 import React, {useState} from "react"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import eurojackpot from "../js/eurojackpot"
-import EurojackpotRow from "../components/Eurojackpot/EurojackpotRow"
-import {Button, ClearButton} from "../styles/Button"
-import {InfoSpan} from "../styles/InfoSpan"
-import {Grid} from "../styles/Grid"
+import Layout from "components/Layout"
+import SEO from "components/seo"
+import eurojackpot from "js/eurojackpot"
+import Index from "components/Eurojackpot"
+import {Button, ClearButton} from "styles/Button"
+import {InfoSpan} from "styles/InfoSpan"
+import {Grid} from "styles/Grid"
 
 const EurojackpotPage = () => {
 
@@ -34,7 +34,7 @@ const EurojackpotPage = () => {
 
     let rows = [];
     for (let i = 0; i < counter; i++)  {
-      rows.push(<EurojackpotRow nums={rowNums[i]} key={i} />);
+      rows.push(<Index nums={rowNums[i]} key={i} />);
     }
     return rows;
   }

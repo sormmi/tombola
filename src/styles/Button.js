@@ -2,11 +2,12 @@ import styled from "styled-components"
 
 export const Button = styled.button`
   background: white;
-  border: 2px solid steelblue;
+  border: 2px solid;
+  border-color: ${ props => props.theme.colors.textDark };
+  color: ${ props => props.theme.colors.textDark };
   padding: 0.3em 1em;
   font-size: 16px;
   font-weight: bolder;
-  color: steelblue;
   border-radius: 3px;
   margin: 0 10px;
   cursor: pointer;

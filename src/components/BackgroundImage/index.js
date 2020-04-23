@@ -1,8 +1,8 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
-import styled from 'styled-components';
 
 import BackgroundImage from 'gatsby-background-image';
+import styled from "styled-components"
 
 const BackgroundSection = ({ className, theme, title, description }) => (
   <StaticQuery
@@ -57,15 +57,20 @@ const StyledBackgroundSection = styled(BackgroundSection)`
     position: absolute;
     top: 30%;
     left: 50%;
-    width: 50%;
-    margin: 0 0 0 -25%;
+    width: 70%;
+    margin: 0 0 0 -43%;
     background: rgba(0, 0, 0, 0.25);
     padding: 30px;
     
-    @media only screen and (max-width: 600px){
-      width: 70%;
-      margin: 0 0 0 -35%;
+    @media only screen and (min-width: 768px){
+      width: 40%;
+      margin: -2% 0 0 -25%;
+    }
+    
+    h2 {
+      color: white;
     }
   }
 `
+
 export default StyledBackgroundSection

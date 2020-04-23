@@ -1,47 +1,26 @@
 import React from "react";
 import {Link} from "gatsby";
 
-import styled from "styled-components";
-import {
-  FaLinkedin,
-  FaTwitter,
-} from "react-icons/fa/";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa/";
+import { FooterWrapper, FooterLinks } from "./Footer.styles"
 
-const FooterDiv = styled.div`
-  text-align: center;
-  background: #fafafa;
-  padding-bottom: 50px;
-
-  img {
-    margin-top: 50px;
-    height: 30px;
-  }
-
-  a {
-    color: black;
-    padding: 10px;
-  }
-
-  h1 {
-    font-size: 1em;
-    margin: 6px 0;
-  }
-`;
-
-const FooterLinks = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 50px);
-  justify-content: center;
-`;
-
-const Footer = () => {
+const Footer = ({ title }) => {
   return (
 
-    <FooterDiv>
-      <Link to="/"><h2>omatombola</h2></Link>
+    <FooterWrapper>
+      <Link to="/"><h2>{title}</h2></Link>
       <span>Arvontapalvelu suosituille veikkauspeleille</span>
 
       <FooterLinks>
+        <a
+          href="https://github.com/sormmi"
+          target="_blank"
+          rel="noopener noreferrer"
+          key="github"
+        >
+          <FaGithub size={30} />
+        </a>
+
         <a
           href="https://www.linkedin.com/in/mika-sormunen-51958171"
           target="_blank"
@@ -64,7 +43,7 @@ const Footer = () => {
 
       <small>&copy; sormmi {new Date().getFullYear()}</small>
 
-    </FooterDiv>
+    </FooterWrapper>
   );
 };
 

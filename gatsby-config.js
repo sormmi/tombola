@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `omatombola`,
+    titleLong: `omatombola arvontapalvelu`,
     description: `Pelinumeroiden arvontapalvelu`,
     author: `@sormmi`,
   },
@@ -13,6 +14,19 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `config`,
+        path: `${__dirname}/src/config`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

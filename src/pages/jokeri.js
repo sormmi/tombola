@@ -1,14 +1,14 @@
 import React, {useState} from "react"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import jokeri from "../js/jokeri"
-import JokeriRow from "../components/Jokeri/JokeriRow"
-import {Button, ClearButton} from "../styles/Button"
-import {InfoSpan} from "../styles/InfoSpan"
-import {Grid} from "../styles/Grid"
+import Layout from "components/Layout"
+import SEO from "components/seo"
+import jokeri from "js/jokeri"
+import Index from "components/Jokeri"
+import {Button, ClearButton} from "styles/Button"
+import {InfoSpan} from "styles/InfoSpan"
+import {Grid} from "styles/Grid"
 
-const SecondPage = () => {
+const JokeriPage = () => {
 
   const [jokeriCounter, setJokeriCounter] = useState(0);
   const [jokeriRowNums, setJokeriRowNums] = useState([[]]);
@@ -35,7 +35,7 @@ const SecondPage = () => {
 
     let rows = [];
     for (let i = 0; i < jokeriCounter; i++) {
-      rows.push(<JokeriRow nums={jokeriRowNums[i]} key={i}/>);
+      rows.push(<Index nums={jokeriRowNums[i]} key={i}/>);
     }
     return rows;
   }
@@ -57,4 +57,4 @@ const SecondPage = () => {
   )
 }
 
-export default SecondPage
+export default JokeriPage
