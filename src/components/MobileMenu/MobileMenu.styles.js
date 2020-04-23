@@ -29,10 +29,11 @@ export const Nav = styled.ul`
   width: 100%;
   top: 50px;
   list-style-type: none;
-  padding: 10px;
+  padding: 10px 20px;
   font-family: "Muli Reqular", Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
-  background: ${props => props.theme.colors.menuBackground};
+  background: white;
+  border: 1px solid #ccc;
   
   a {
     text-decoration: none;

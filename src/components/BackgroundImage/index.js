@@ -69,6 +69,7 @@ const StyledBackgroundSection = styled(BackgroundSection)`
     
     h2 {
       color: white;
+      font-size: 1.8rem;
     }
   }
 `

@@ -17,7 +17,7 @@ export const FooterWrapper = styled.div`
   }
 
   h2 {
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin: 6px 0;
   }
 `;

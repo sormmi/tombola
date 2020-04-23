@@ -9,7 +9,11 @@ import Footer from "components/Footer"
 import { useSiteMetadataQuery } from "hooks/useSiteMetadataQuery"
 
 const defaultTheme = {
-  height: "calc(100vh - 66px)",
+  height: "calc(100vh - 66px)"
+}
+
+const gameTheme = {
+  height: "200px"
 }
 
 const Layout = ({ children, page, title, titleLong, description }) => {
@@ -22,7 +26,7 @@ const Layout = ({ children, page, title, titleLong, description }) => {
     <ThemeProvider theme={lightMode ? lightTheme : darkTheme}>
       <GlobalStyles />
       <Header siteTitle={title} />
-      <StyledBackgroundSection theme={page === "home" ? defaultTheme : {height: "200px"}} title={heroTitle} description={description} />
+      <StyledBackgroundSection theme={page === "home" ? defaultTheme : gameTheme} title={heroTitle} description={description} />
       <main>{children}</main>
       <Footer title={siteMetadata.title} />
     </ThemeProvider>

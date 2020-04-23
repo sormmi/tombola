@@ -2,13 +2,13 @@ import styled from "styled-components"
 
 export const Grid = styled.div`
   display: grid;
-  grid-template-rows: 1fr;
   align-items: start;
+  justify-content: center;
   row-gap: 10px;
-  margin: 20px;
+  margin: 10px 0;
   padding: 20px;
   
-  @media only screen and (max-width: 600px){
-    margin: 10px 0;
+  @media only screen and (min-width: 768px){
+      margin: 20px;
   }
 `;

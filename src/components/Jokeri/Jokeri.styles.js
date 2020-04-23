@@ -5,7 +5,7 @@ export const JokeriRowWrapper = styled.div`
   justify-content: center;
   align-items: center;
   grid-template-columns: repeat(7, 40px);
-  column-gap: 0;
+  column-gap: 8px;
   opacity: 1;
   animation-timing-function: ease-in;
   animation-duration: .5s;
@@ -21,7 +21,7 @@ export const JokeriRowWrapper = styled.div`
   }
   @media only screen and (min-width: 768px){
     grid-template-columns: repeat(7, 60px);
-    column-gap: 20px;
+    column-gap: 12px;
   }
 `;
 
@@ -32,7 +32,7 @@ export const JokeriNumber = styled.label`
   font-weight: bold;
   background: #282c34;
   color: white;
-  padding: 4px 8px;
+  padding: 8px 12px;
   justify-self: center;
   
   @media only screen and (min-width: 768px){

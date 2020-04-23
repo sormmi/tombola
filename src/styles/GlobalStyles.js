@@ -6,7 +6,8 @@ export const colors = {
   deepDarkGray: "#404040",
   blueShade1: "#215973",
   blueShade2: "#6fadc6",
-  blueShade3: "#d1e1e9"
+  blueShade3: "#d1e1e9",
+  redShade: "#bf3030"
 }
 
 export const lightTheme = {
@@ -15,7 +16,8 @@ export const lightTheme = {
     menuBackground: colors.blueShade3,
     textDark: colors.blueShade1,
     textMain: colors.blueShade2,
-    textSecondary: colors.deepDarkGray
+    textSecondary: colors.deepDarkGray,
+    textDanger: colors.redShade
   }
 }
 
@@ -25,13 +27,14 @@ export const darkTheme = {
     menuBackground: colors.blueShade1,
     textDark: colors.blueShade3,
     textMain: colors.blueShade2,
-    textSecondary: colors.blueShade3
+    textSecondary: colors.blueShade3,
+    textDanger: colors.redShade
   }
 }
 
 export const GlobalStyles = createGlobalStyle`
   :root {
-    --site-max-width: 1280px;
+    --site-max-width: 1200px;
   }
   
   @font-face {
@@ -61,7 +64,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   h2 {
-    font-size: 1rem;
+    font-size: 1.3rem;
     letter-spacing: 1.8px;
     
     @media screen and (min-width: 768px) {

@@ -19,11 +19,11 @@ export const HamburgerIcon = styled.div`
   }
   
   :before {
-    transform: ${ props => props.menuOpen ? 'translateY(9px) rotate(45deg)' : '' };
+    transform: ${ props => props.menuOpen ? 'translateY(9px) rotate(-45deg)' : '' };
   }
   
   :after {
-    transform: ${ props => props.menuOpen ? 'translateY(-9px) rotate(-45deg)' : '' };
+    transform: ${ props => props.menuOpen ? 'translateY(-9px) rotate(45deg)' : '' };
   }
   
   div {
