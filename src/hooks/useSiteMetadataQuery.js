@@ -7,6 +7,8 @@ export const useSiteMetadataQuery = () => {
         siteMetadata {
           title
           titleLong
+          games
+          description
         }
       }
     }

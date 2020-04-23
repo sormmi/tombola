@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `omatombola`,
     titleLong: `omatombola arvontapalvelu`,
-    description: `Pelinumeroiden arvontapalvelu`,
+    games: 'jokeri, lotto, vikinglotto, eurojackpot, vakio',
+    description: `Arvontapalvelu suosituille veikkauspeleille`,
     author: `@sormmi`,
   },
   plugins: [

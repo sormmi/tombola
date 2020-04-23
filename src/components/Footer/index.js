@@ -3,13 +3,17 @@ import {Link} from "gatsby";
 
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa/";
 import { FooterWrapper, FooterLinks } from "./Footer.styles"
+import { useSiteMetadataQuery } from "hooks/useSiteMetadataQuery"
 
-const Footer = ({ title }) => {
+const Footer = () => {
+
+  const site = useSiteMetadataQuery();
+
   return (
 
     <FooterWrapper>
-      <Link to="/"><h2>{title}</h2></Link>
-      <span>Arvontapalvelu suosituille veikkauspeleille</span>
+      <Link to="/"><h2>{site.title}</h2></Link>
+      <span>{site.description}</span>
 
       <FooterLinks>
         <a

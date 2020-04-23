@@ -3,7 +3,7 @@ import React, {useState} from "react"
 import Layout from "components/Layout"
 import SEO from "components/seo"
 import eurojackpot from "js/eurojackpot"
-import Index from "components/Eurojackpot"
+import Eurojackpot from "components/Eurojackpot"
 import {Button, ClearButton} from "styles/Button"
 import {InfoSpan} from "styles/InfoSpan"
 import {Grid} from "styles/Grid"
@@ -34,7 +34,7 @@ const EurojackpotPage = () => {
 
     let rows = [];
     for (let i = 0; i < counter; i++)  {
-      rows.push(<Index nums={rowNums[i]} key={i} />);
+      rows.push(<Eurojackpot nums={rowNums[i]} key={i} />);
     }
     return rows;
   }

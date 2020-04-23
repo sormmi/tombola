@@ -2,13 +2,13 @@ import React, {useState} from "react"
 
 import Layout from "components/Layout"
 import SEO from "components/seo"
-import viking from "js/viking"
-import Viking from "components/Viking"
+import vakio from "js/vakio"
+import Vakio from "components/Vakio"
 import {Button, ClearButton} from "styles/Button"
 import {InfoSpan} from "styles/InfoSpan"
-import {Grid} from "styles/Grid"
+import { Column } from "styles/Grid"
 
-const VikingPage = () => {
+const VakioPage = () => {
 
   const [counter, setCounter] = useState(0);
   const [rowNums, setRowNums] = useState([[]]);
@@ -22,40 +22,39 @@ const VikingPage = () => {
     }
 
     let temp = counter + val;
-    if (temp > 10) temp = 10;
+    if (temp > 7) temp = 7;
 
     setCounter(temp);
 
-    rowNums[temp-1] = viking();
+    rowNums[temp - 1] = vakio();
   }
 
-  const getVikingRows = () => {
+  const getVakioRows = () => {
 
     if (counter < 1) return <InfoSpan>Ei arvottuja rivejä</InfoSpan>;
 
     let rows = [];
-    for (let i = 0; i < counter; i++)  {
-      rows.push(<Viking nums={rowNums[i]} key={i} />);
+    for (let i = 0; i < counter; i++) {
+      rows.push(<Vakio nums={rowNums[i]} key={i}/>);
     }
     return rows;
   }
-
   return (
-    <Layout page="viking" title="vikinglotto">
-      <SEO title="Viking"/>
+    <Layout page="vakio" title="vakio">
+      <SEO title="Vakio"/>
 
       <div className="container">
 
         <Button onClick={() => handleClick(1)}>Arvo rivi</Button>
         <ClearButton onClick={() => handleClick(-1)}>Tyhjennä</ClearButton>
 
-        <Grid>
-          {getVikingRows()}
-        </Grid>
+        <Column>
+          {getVakioRows()}
+        </Column>
 
       </div>
     </Layout>
   )
 }
 
-export default VikingPage
+export default VakioPage

@@ -3,7 +3,7 @@ import React, {useState} from "react"
 import Layout from "components/Layout"
 import SEO from "components/seo"
 import jokeri from "js/jokeri"
-import Index from "components/Jokeri"
+import Jokeri from "components/Jokeri"
 import {Button, ClearButton} from "styles/Button"
 import {InfoSpan} from "styles/InfoSpan"
 import {Grid} from "styles/Grid"
@@ -35,7 +35,7 @@ const JokeriPage = () => {
 
     let rows = [];
     for (let i = 0; i < jokeriCounter; i++) {
-      rows.push(<Index nums={jokeriRowNums[i]} key={i}/>);
+      rows.push(<Jokeri nums={jokeriRowNums[i]} key={i}/>);
     }
     return rows;
   }
