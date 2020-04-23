@@ -32,7 +32,7 @@ const BackgroundSection = ({ className, theme, title, description }) => (
               <h2>{title}</h2>
             }
             {!!description &&
-              <small>{description}</small>
+              <p>{description}</p>
             }
           </div>
           }
@@ -55,21 +55,21 @@ const StyledBackgroundSection = styled(BackgroundSection)`
   
   div {
     position: absolute;
-    top: 30%;
-    left: 50%;
-    width: 70%;
-    margin: 0 0 0 -43%;
+    top: 25%;
+    width: 60%;
+    margin: 0 0 0 20%;
     background: rgba(0, 0, 0, 0.25);
-    padding: 30px;
+    padding: 0px;
     
     @media only screen and (min-width: 768px){
       width: 40%;
-      margin: -2% 0 0 -25%;
+      margin: 0 0 0 30%;
     }
     
     h2 {
       color: white;
       font-size: 1.8rem;
+      padding: 20px;
     }
   }
 `
