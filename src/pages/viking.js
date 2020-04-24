@@ -40,7 +40,7 @@ const VikingPage = () => {
 
     let rows = [];
     for (let i = 0; i < counter; i++)  {
-      rows.push(<Viking nums={rowNums[i]} key={i} onDelete={handleDelete} />);
+      rows.push(<Viking nums={rowNums[i]} index={i} key={i} onDelete={handleDelete} />);
     }
     return rows;
   }
