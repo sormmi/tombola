@@ -1,24 +1,17 @@
-import React from 'react';
+import React from "react"
 import { EurojackpotRowWrapper, EurojackpotNumber } from "./Eurojackpot.styles"
+import { FaTrash } from "react-icons/fa"
+import { DeleteIcon } from "styles/DeleteIcon"
 
-const Eurojackpot = ({nums}) => {
+const Eurojackpot = ({ nums, index, onDelete }) => (
+  <EurojackpotRowWrapper>
+    {nums.map((num, i) => (
+      <EurojackpotNumber key={i}>{num}</EurojackpotNumber>
+    ))}
+    <DeleteIcon>
+      <FaTrash size={16} onClick={() => onDelete(index)}/>
+    </DeleteIcon>
+  </EurojackpotRowWrapper>
+)
 
-  const extraNumberIndex = 5;
-
-  return (
-    <EurojackpotRowWrapper>
-      {nums.map((num, index) => {
-        if (index === extraNumberIndex) {
-          return (
-            <React.Fragment key={index}>
-              <span>&nbsp;</span>
-              <EurojackpotNumber index={index}>{num}</EurojackpotNumber>
-            </React.Fragment>)
-        }
-        return (<EurojackpotNumber key={index} index={index}>{num}</EurojackpotNumber>)
-      })}
-    </EurojackpotRowWrapper>
-  );
-}
-
-export default Eurojackpot;
+export default Eurojackpot

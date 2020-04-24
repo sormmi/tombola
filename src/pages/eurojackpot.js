@@ -28,13 +28,18 @@ const EurojackpotPage = () => {
     rowNums[temp-1] = eurojackpot();
   }
 
+  const handleDelete = (index) => {
+    rowNums.splice(index,1);
+    setCounter(counter - 1);
+  }
+
   const getEurojackpotRows = () => {
 
     if (counter < 1) return <InfoSpan>Ei arvottuja rivejä</InfoSpan>;
 
     let rows = [];
     for (let i = 0; i < counter; i++)  {
-      rows.push(<Eurojackpot nums={rowNums[i]} key={i} />);
+      rows.push(<Eurojackpot nums={rowNums[i]} key={i} index={i} onDelete={handleDelete} />);
     }
     return rows;
   }

@@ -29,13 +29,18 @@ const JokeriPage = () => {
     jokeriRowNums[temp - 1] = jokeri();
   }
 
+  const handleDelete = (index) => {
+    jokeriRowNums.splice(index,1);
+    setJokeriCounter(jokeriCounter - 1);
+  }
+
   const getJokeriRows = () => {
 
     if (jokeriCounter < 1) return <InfoSpan>Ei arvottuja rivejä</InfoSpan>;
 
     let rows = [];
     for (let i = 0; i < jokeriCounter; i++) {
-      rows.push(<Jokeri nums={jokeriRowNums[i]} key={i}/>);
+      rows.push(<Jokeri nums={jokeriRowNums[i]} key={i} index={i} onDelete={handleDelete}/>);
     }
     return rows;
   }

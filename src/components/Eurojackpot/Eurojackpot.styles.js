@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const EurojackpotRowWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(5, 40px) auto 40px 40px;
+  grid-template-columns: repeat(7, 40px) 16px;
   column-gap: 3px;
   justify-content: center;
   align-items: center;
@@ -21,7 +21,7 @@ export const EurojackpotRowWrapper = styled.div`
   }
   
   @media only screen and (min-width: 768px){
-    grid-template-columns: repeat(5, 60px) auto 60px 60px;
+    grid-template-columns: repeat(7, 60px) 16px;
     column-gap: 10px;
   }
 `;
@@ -40,3 +40,4 @@ export const EurojackpotNumber = styled.label`
     padding: 20px;
   }
 `;
+

@@ -29,13 +29,18 @@ const LottoPage = () => {
     rowNums[temp-1] = lotto();
   }
 
+  const handleDelete = (index) => {
+    rowNums.splice(index,1);
+    setCounter(counter - 1);
+  }
+
   const getLottoRows = () => {
 
     if (counter < 1) return <InfoSpan>Ei arvottuja rivejä</InfoSpan>;
 
     let rows = [];
     for (let i = 0; i < counter; i++)  {
-      rows.push(<Lotto nums={rowNums[i]} key={i} />);
+      rows.push(<Lotto index={i} nums={rowNums[i]} key={i} onDelete={handleDelete} />);
     }
     return rows;
   }

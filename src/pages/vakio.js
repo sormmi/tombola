@@ -29,13 +29,18 @@ const VakioPage = () => {
     rowNums[temp - 1] = vakio();
   }
 
+  const handleDelete = (index) => {
+    rowNums.splice(index,1);
+    setCounter(counter - 1);
+  }
+
   const getVakioRows = () => {
 
     if (counter < 1) return <InfoSpan>Ei arvottuja rivejä</InfoSpan>;
 
     let rows = [];
     for (let i = 0; i < counter; i++) {
-      rows.push(<Vakio nums={rowNums[i]} key={i}/>);
+      rows.push(<Vakio nums={rowNums[i]} key={i} index={i} onDelete={handleDelete}/>);
     }
     return rows;
   }

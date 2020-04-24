@@ -4,7 +4,7 @@ export const JokeriRowWrapper = styled.div`
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(7, 40px);
+  grid-template-columns: repeat(7, 40px) 16px;
   column-gap: 8px;
   opacity: 1;
   animation-timing-function: ease-in;
@@ -20,7 +20,7 @@ export const JokeriRowWrapper = styled.div`
     }
   }
   @media only screen and (min-width: 768px){
-    grid-template-columns: repeat(7, 60px);
+    grid-template-columns: repeat(7, 60px) 16px;
     column-gap: 12px;
   }
 `;

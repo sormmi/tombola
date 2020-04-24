@@ -1,25 +1,17 @@
-import React from 'react';
+import React from "react"
 import { VikingRowWrapper, VikingNumber } from "./Viking.styles"
+import { DeleteIcon } from "styles/DeleteIcon"
+import { FaTrash } from "react-icons/fa"
 
-const Viking = ({nums}) => {
+const Viking = ({ index, nums, onDelete }) => (
+  <VikingRowWrapper>
+    {nums.map((num, i) => (
+      <VikingNumber key={i}>{num}</VikingNumber>
+    ))}
+    <DeleteIcon>
+      <FaTrash size={16} onClick={() => onDelete(index)}/>
+    </DeleteIcon>
+  </VikingRowWrapper>
+)
 
-  const extraNumberIndex = 6;
-
-  return (
-    <VikingRowWrapper>
-      {nums.map((num, index) => {
-        if (index === extraNumberIndex) {
-          return (
-            <React.Fragment key={index}>
-              <span>&nbsp;</span>
-              <VikingNumber index={index}>{num}</VikingNumber>
-            </React.Fragment>
-          )
-        }
-        return (<VikingNumber key={index} index={index}>{num}</VikingNumber>)
-      })}
-    </VikingRowWrapper>
-  );
-}
-
-export default Viking;
+export default Viking

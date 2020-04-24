@@ -2,9 +2,8 @@ import styled from "styled-components"
 
 export const VakioRowWrapper = styled.div`
   display: grid;
-  justify-content: centerx;
   align-items: start;
-  grid-template-rows: repeat(13, 40px);
+  grid-template-rows: repeat(13, 40px) 16px;
   grid-gap: 4px;
   opacity: 1;
   animation-timing-function: ease-in;
@@ -20,7 +19,7 @@ export const VakioRowWrapper = styled.div`
     }
   }
   @media only screen and (min-width: 768px){
-    grid-template-rows: repeat(13, 40px);
+    grid-template-rows: repeat(13, 40px) 16px;
   }
 `;
 

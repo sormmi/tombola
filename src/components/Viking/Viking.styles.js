@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const VikingRowWrapper= styled.div`
   display: grid;
-  grid-template-columns: repeat(6, 40px) auto 40px;
+  grid-template-columns: repeat(7, 40px) 16px;
   grid-gap: 3px;
   justify-content: center;
   align-items: center;
@@ -20,7 +20,7 @@ export const VikingRowWrapper= styled.div`
     }
   }
   @media only screen and (min-width: 768px){
-    grid-template-columns: repeat(6, 60px) auto 60px;
+    grid-template-columns: repeat(7, 60px) 16px;
     grid-gap: 10px;
   }
 `;

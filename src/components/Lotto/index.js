@@ -1,14 +1,17 @@
-import React from 'react';
+import React from "react"
+import { FaTrash } from "react-icons/fa"
 import { LottoRowWrapper, LottoNumber } from "./Lotto.styles"
+import { DeleteIcon } from "styles/DeleteIcon"
 
-const Lotto = ({nums}) => {
-  return (
-    <LottoRowWrapper>
-      {nums.map((num, index) => {
-        return <LottoNumber key={index}>{num}</LottoNumber>
-      })}
-    </LottoRowWrapper>
-  );
-}
+const Lotto = ({ index, nums, onDelete }) => (
+  <LottoRowWrapper>
+    {nums.map((num, i) => {
+      return <LottoNumber key={i}>{num}</LottoNumber>
+    })}
+    <DeleteIcon>
+      <FaTrash size={16} onClick={() => onDelete(index)}/>
+    </DeleteIcon>
+  </LottoRowWrapper>
+)
 
-export default Lotto;
+export default Lotto

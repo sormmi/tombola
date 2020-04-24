@@ -29,13 +29,18 @@ const VikingPage = () => {
     rowNums[temp-1] = viking();
   }
 
+  const handleDelete = (index) => {
+    rowNums.splice(index,1);
+    setCounter(counter - 1);
+  }
+
   const getVikingRows = () => {
 
     if (counter < 1) return <InfoSpan>Ei arvottuja rivejä</InfoSpan>;
 
     let rows = [];
     for (let i = 0; i < counter; i++)  {
-      rows.push(<Viking nums={rowNums[i]} key={i} />);
+      rows.push(<Viking nums={rowNums[i]} key={i} onDelete={handleDelete} />);
     }
     return rows;
   }
