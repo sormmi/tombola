@@ -8,8 +8,8 @@ const Vakio = ({ nums, index, onDelete }) => (
     {nums.map((num, i) => {
       return <VakioNumber key={i}>{num}</VakioNumber>
     })}
-    <DeleteIcon>
-      <FaTrash size={16} onClick={() => onDelete(index)}/>
+    <DeleteIcon onClick={() => onDelete(index)}>
+      <FaTrash size={16} />
     </DeleteIcon>
   </VakioRowWrapper>
 )

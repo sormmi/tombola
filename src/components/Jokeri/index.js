@@ -8,8 +8,8 @@ const Jokeri = ({ nums, index, onDelete }) => (
     {nums.map((num, i) => {
       return <JokeriNumber key={i}>{num}</JokeriNumber>
     })}
-    <DeleteIcon>
-      <FaTrash size={16} onClick={() => onDelete(index)}/>
+    <DeleteIcon onClick={() => onDelete(index)}>
+      <FaTrash size={16} />
     </DeleteIcon>
   </JokeriRowWrapper>
 )

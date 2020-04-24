@@ -8,8 +8,8 @@ const Lotto = ({ index, nums, onDelete }) => (
     {nums.map((num, i) => {
       return <LottoNumber key={i}>{num}</LottoNumber>
     })}
-    <DeleteIcon>
-      <FaTrash size={16} onClick={() => onDelete(index)}/>
+    <DeleteIcon onClick={() => onDelete(index)}>
+      <FaTrash size={16} />
     </DeleteIcon>
   </LottoRowWrapper>
 )

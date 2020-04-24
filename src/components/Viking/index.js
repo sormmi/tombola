@@ -8,8 +8,8 @@ const Viking = ({ index, nums, onDelete }) => (
     {nums.map((num, i) => (
       <VikingNumber key={i}>{num}</VikingNumber>
     ))}
-    <DeleteIcon>
-      <FaTrash size={16} onClick={() => onDelete(index)}/>
+    <DeleteIcon onClick={() => onDelete(index)}>
+      <FaTrash size={16} />
     </DeleteIcon>
   </VikingRowWrapper>
 )

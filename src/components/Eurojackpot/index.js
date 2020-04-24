@@ -8,8 +8,8 @@ const Eurojackpot = ({ nums, index, onDelete }) => (
     {nums.map((num, i) => (
       <EurojackpotNumber key={i}>{num}</EurojackpotNumber>
     ))}
-    <DeleteIcon>
-      <FaTrash size={16} onClick={() => onDelete(index)}/>
+    <DeleteIcon onClick={() => onDelete(index)}>
+      <FaTrash size={16} />
     </DeleteIcon>
   </EurojackpotRowWrapper>
 )
