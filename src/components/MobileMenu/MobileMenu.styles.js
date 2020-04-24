@@ -37,7 +37,7 @@ export const Nav = styled.ul`
   
   a {
     text-decoration: none;
-    color: ${ props => props.theme.colors.textDark }
+    color: #1a1c20;
   }
   
   li {

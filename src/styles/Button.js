@@ -3,8 +3,8 @@ import styled from "styled-components"
 export const Button = styled.button`
   background: white;
   border: 2px solid;
-  border-color: ${ props => props.theme.colors.textDark };
-  color: ${ props => props.theme.colors.textDark };
+  border-color: #1a1c20;
+  color: #1a1c20;
   padding: 0.3em 1em;
   font-size: 18px;
   font-weight: normal;

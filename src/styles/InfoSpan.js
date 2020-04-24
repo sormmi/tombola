@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const InfoSpan = styled.span`
-  color: ${ props => props.theme.colors.textDark };
+  color: #1a1c20;
   margin-bottom: 20px;
   
   @media only screen and (min-width: 768px){

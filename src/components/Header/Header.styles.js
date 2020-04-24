@@ -20,7 +20,7 @@ export const Branding = styled.div`
 
   a {
     font-size: 22px;
-    color: black;
+    color: #1a1c20;
     font-weight: bold;
     text-decoration: none;
   }

@@ -5,7 +5,7 @@ export const JokeriRowWrapper = styled.div`
   justify-content: center;
   align-items: center;
   grid-template-columns: repeat(7, 40px) 16px;
-  column-gap: 8px;
+  column-gap: 2px;
   opacity: 1;
   animation-timing-function: ease-in;
   animation-duration: .5s;
