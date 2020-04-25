@@ -21,12 +21,20 @@ const LottoPage = () => {
       return;
     }
 
-    let temp = counter + val;
-    if (temp > 10) temp = 10;
+    let index = counter + val;
+    if (index > 10) index = 10;
 
-    setCounter(temp);
+    setupLotto(index);
+  }
 
-    rowNums[temp-1] = lotto();
+  const setupLotto = (count) => {
+    setCounter(count);
+
+    if (count < 2) {
+      setRowNums([lotto()]);
+    } else {
+      setRowNums([...rowNums, lotto()]);
+    }
   }
 
   const handleDelete = (index) => {

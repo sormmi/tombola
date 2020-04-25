@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 
 import Layout from "components/Layout"
 import SEO from "components/seo"
@@ -21,12 +21,20 @@ const VikingPage = () => {
       return;
     }
 
-    let temp = counter + val;
-    if (temp > 10) temp = 10;
+    let index = counter + val;
+    if (index > 10) index = 10;
 
-    setCounter(temp);
+    setupViking(index);
+  }
 
-    rowNums[temp-1] = viking();
+  const setupViking = (count) => {
+    setCounter(count);
+
+    if (count === 1) {
+      setRowNums([viking()]);
+    } else {
+      setRowNums([...rowNums, viking()]);
+    }
   }
 
   const handleDelete = (index) => {

@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 
 import Layout from "components/Layout"
 import SEO from "components/seo"
@@ -21,12 +21,20 @@ const VakioPage = () => {
       return;
     }
 
-    let temp = counter + val;
-    if (temp > 7) temp = 7;
+    let index = counter + val;
+    if (index > 7) index = 7;
 
-    setCounter(temp);
+    setupVakio(index);
+  }
 
-    rowNums[temp - 1] = vakio();
+  const setupVakio = (count) => {
+    setCounter(count);
+
+    if (count < 2) {
+      setRowNums([vakio()]);
+    } else {
+      setRowNums([...rowNums, vakio()]);
+    }
   }
 
   const handleDelete = (index) => {

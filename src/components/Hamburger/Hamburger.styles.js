@@ -12,7 +12,7 @@ export const HamburgerIcon = styled.div`
     display: block;
     height: 4px;
     margin: 5px 0;
-    background: #1a1c20;
+    background: #215973;
     border-radius: 2px;
     content: '';
     transition: all 0.2s ease-in-out;

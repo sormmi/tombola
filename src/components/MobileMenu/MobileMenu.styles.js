@@ -37,7 +37,7 @@ export const Nav = styled.ul`
   
   a {
     text-decoration: none;
-    color: #1a1c20;
+    color: #215973;
   }
   
   li {

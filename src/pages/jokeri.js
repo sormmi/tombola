@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 
 import Layout from "components/Layout"
 import SEO from "components/seo"
@@ -10,37 +10,45 @@ import {Grid} from "styles/Grid"
 
 const JokeriPage = () => {
 
-  const [jokeriCounter, setJokeriCounter] = useState(0);
-  const [jokeriRowNums, setJokeriRowNums] = useState([[]]);
+  const [counter, setCounter] = useState(0);
+  const [rowNums, setRowNums] = useState([[]]);
 
   const handleJokeriClick = (val) => {
 
     if (val < 0) {
-      setJokeriCounter(0);
-      setJokeriRowNums([[]]);
+      setCounter(0);
+      setRowNums([[]]);
       return;
     }
 
-    let temp = jokeriCounter + val;
-    if (temp > 10) temp = 10;
+    let index = counter + val;
+    if (index > 10) index = 10;
 
-    setJokeriCounter(temp);
+    setupJokeri(index);
+  }
 
-    jokeriRowNums[temp - 1] = jokeri();
+  const setupJokeri = (count) => {
+    setCounter(count);
+
+    if (count === 1) {
+      setRowNums([jokeri()]);
+    } else {
+      setRowNums([...rowNums, jokeri()]);
+    }
   }
 
   const handleDelete = (index) => {
-    jokeriRowNums.splice(index,1);
-    setJokeriCounter(jokeriCounter - 1);
+    rowNums.splice(index,1);
+    setCounter(counter - 1);
   }
 
   const getJokeriRows = () => {
 
-    if (jokeriCounter < 1) return <InfoSpan>Ei arvottuja rivejä</InfoSpan>;
+    if (counter < 1) return <InfoSpan>Ei arvottuja rivejä</InfoSpan>;
 
     let rows = [];
-    for (let i = 0; i < jokeriCounter; i++) {
-      rows.push(<Jokeri nums={jokeriRowNums[i]} key={i} index={i} onDelete={handleDelete}/>);
+    for (let i = 0; i < counter; i++) {
+      rows.push(<Jokeri nums={rowNums[i]} key={i} index={i} onDelete={handleDelete}/>);
     }
     return rows;
   }
