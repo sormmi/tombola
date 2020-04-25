@@ -1,7 +1,7 @@
 import React, {useContext} from "react"
 import { ThemeProvider} from "styled-components"
 
-import { GlobalStyles, lightTheme, darkTheme} from "styles/GlobalStyles"
+import { GlobalStyles, lightTheme, darkTheme} from "../../styles/GlobalStyles"
 import Header from "components/Header"
 import { ModeContext } from "context/ModeProvider"
 import StyledBackgroundSection from "components/BackgroundImage"
