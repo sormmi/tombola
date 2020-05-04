@@ -19,6 +19,9 @@ export const Button = styled.button`
     outline:0 !important;
     box-shadow: none !important;
   }
+  &:active {
+    transform: scale(0.98);
+  }
 `;
 
 export const ClearButton = styled(Button)`
