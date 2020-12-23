@@ -44,14 +44,12 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Lato`,
-            variants: [`300`, `400`, `700`, `900`],
-          },
+            `Lato\:300,400,700,900`,
         ],
+         display: 'swap',
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
