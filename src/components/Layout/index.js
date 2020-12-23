@@ -12,7 +12,7 @@ const defaultTheme = {
 }
 
 const gameTheme = {
-  height: "200px"
+  height: "300px"
 }
 
 const Layout = ({ children, page, title, titleLong, description }) => {
