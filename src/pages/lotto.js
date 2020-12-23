@@ -4,68 +4,63 @@ import Layout from "components/Layout"
 import SEO from "components/seo"
 import lotto from "js/lotto"
 import Lotto from "components/Lotto"
-import {Button, ClearButton} from "styles/Button"
-import {InfoSpan} from "styles/InfoSpan"
-import {Grid} from "styles/Grid"
+import { Button, ClearButton } from "styles/Button"
+import { InfoSpan } from "styles/InfoSpan"
+import { Grid } from "styles/Grid"
 
 const LottoPage = () => {
+  const [counter, setCounter] = useState(0)
+  const [rowNums, setRowNums] = useState([[]])
 
-  const [counter, setCounter] = useState(0);
-  const [rowNums, setRowNums] = useState([[]]);
-
-  const handleClick = (val) => {
-
+  const handleClick = val => {
     if (val < 0) {
-      setCounter(0);
-      setRowNums([[]]);
-      return;
+      setCounter(0)
+      setRowNums([[]])
+      return
     }
 
-    let index = counter + val;
-    if (index > 10) index = 10;
+    let index = counter + val
+    if (index > 10) index = 10
 
-    setupLotto(index);
+    setupLotto(index)
   }
 
-  const setupLotto = (count) => {
-    setCounter(count);
+  const setupLotto = count => {
+    setCounter(count)
 
     if (count < 2) {
-      setRowNums([lotto()]);
+      setRowNums([lotto()])
     } else {
-      setRowNums([...rowNums, lotto()]);
+      setRowNums([...rowNums, lotto()])
     }
   }
 
-  const handleDelete = (index) => {
-    rowNums.splice(index,1);
-    setCounter(counter - 1);
+  const handleDelete = index => {
+    rowNums.splice(index, 1)
+    setCounter(counter - 1)
   }
 
   const getLottoRows = () => {
+    if (counter < 1) return <InfoSpan>Ei arvottuja rivejä</InfoSpan>
 
-    if (counter < 1) return <InfoSpan>Ei arvottuja rivejä</InfoSpan>;
-
-    let rows = [];
-    for (let i = 0; i < counter; i++)  {
-      rows.push(<Lotto index={i} nums={rowNums[i]} key={i} onDelete={handleDelete} />);
+    let rows = []
+    for (let i = 0; i < counter; i++) {
+      rows.push(
+        <Lotto index={i} nums={rowNums[i]} key={i} onDelete={handleDelete} />
+      )
     }
-    return rows;
+    return rows
   }
 
   return (
     <Layout page="lotto" title="lotto">
-      <SEO title="Lotto"/>
+      <SEO title="Lotto" />
 
       <div className="container">
-
         <Button onClick={() => handleClick(1)}>Arvo rivi</Button>
         <ClearButton onClick={() => handleClick(-1)}>Tyhjennä</ClearButton>
 
-        <Grid>
-          {getLottoRows()}
-        </Grid>
-
+        <Grid>{getLottoRows()}</Grid>
       </div>
     </Layout>
   )

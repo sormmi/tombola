@@ -4,12 +4,12 @@ export const VakioRowWrapper = styled.div`
   display: grid;
   align-items: start;
   grid-template-rows: repeat(13, 40px) 16px;
-  grid-gap: 4px;
+  grid-gap: 2px;
   opacity: 1;
   animation-timing-function: ease-in;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-name: fadeInOpacity;
-  
+
   @keyframes fadeInOpacity {
     0% {
       opacity: 0;
@@ -18,10 +18,10 @@ export const VakioRowWrapper = styled.div`
       opacity: 1;
     }
   }
-  @media only screen and (min-width: 768px){
+  @media only screen and (min-width: 768px) {
     grid-template-rows: repeat(13, 40px) 16px;
   }
-`;
+`
 
 export const VakioNumber = styled.label`
   border: 1px solid beige;
@@ -32,8 +32,8 @@ export const VakioNumber = styled.label`
   color: white;
   padding: 8px 12px;
   justify-self: center;
-  
-  @media only screen and (min-width: 768px){
-    padding: 10px 15px;
+
+  @media only screen and (min-width: 768px) {
+    /*padding: 10px 15px;*/
   }
-`;
+`
