@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
+import { Link } from "gatsby"
 
 import { useSiteConfigQuery } from "hooks/useSiteConfigQuery"
 import { useSiteMetadataQuery } from "hooks/useSiteMetadataQuery"

@@ -49,7 +49,6 @@ export const GlobalStyles = createGlobalStyle`
     font-family: "Lato", Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    transition: all 0.5s ease;
   }
   
   main {
