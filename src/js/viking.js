@@ -13,7 +13,7 @@ const Viking = () => {
 
       nums.sort((a, b) => a - b);
 
-      let extraNum = Math.floor(Math.random() * 8) + 1;
+      let extraNum = Math.floor(Math.random() * 5) + 1;
 
       nums.push(extraNum);
 
